@@ -18,10 +18,13 @@ const userSchema = new mongoose.Schema({
     role: {
         type: Number,
         default: 0
+    },
+    cart: {
+        type: Array,
+        default: []
     }
 },{
     timestamps: true
-}
-)
+})
 
-module.exports = mongoose.model('user', userSchema)
+module.exports = mongoose.model('Users', userSchema)
